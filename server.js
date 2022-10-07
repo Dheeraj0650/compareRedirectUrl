@@ -2,8 +2,10 @@ const express = require('express');
 const bodyParser = require("body-parser");
 const {google} = require('googleapis');
 const https = require('node:https');
+var timeout = require('connect-timeout')
 
 const app = express();
+app.use(timeout('5s'))
 
 const port = process.env.PORT || 3000;
 var client, googleSheets, spreadsheetId, auth, data, row_length, getRows;
