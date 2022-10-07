@@ -19,10 +19,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 // });
 
 app.get('/', async (req, res) => {
-      var statusCodeArray = {};
-      var count =1;
-      var changedLinks = [];
-      var statusMessage = [];
+      statusCodeArray = {};
+      count = 1;
+      changedLinks = [];
+      statusMessage = [];
       auth = await new google.auth.GoogleAuth({
         keyFile: "credentials.json",
         scopes: "https://www.googleapis.com/auth/spreadsheets",
