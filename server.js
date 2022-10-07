@@ -14,11 +14,11 @@ var statusMessage = [];
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get('/', async (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
+// app.get('/', async (req, res) => {
+//   res.sendFile(__dirname + "/index.html");
+// });
 
-app.get('/check', async (req, res) => {
+app.use('/check', async (req, res) => {
       var statusCodeArray = {};
       var count =1;
       var changedLinks = [];
