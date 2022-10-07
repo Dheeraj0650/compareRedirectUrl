@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //   res.sendFile(__dirname + "/index.html");
 // });
 
-app.use('/check', async (req, res) => {
+app.get('/', async (req, res) => {
       var statusCodeArray = {};
       var count =1;
       var changedLinks = [];
